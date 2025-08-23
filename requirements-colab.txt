@@ -1,0 +1,8 @@
+torch          # ここはピン留めしない方がColabではハマりにくい
+torchvision
+torchaudio
+transformers>=4.44.0
+accelerate
+datasets
+trl
+wandb
