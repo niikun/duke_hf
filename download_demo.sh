@@ -1,0 +1,1 @@
+uv run hf download niikun/duke-hf-demo demo_data.jsonl --local-dir ./downloaded
