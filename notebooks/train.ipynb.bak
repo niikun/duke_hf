@@ -1,0 +1,17 @@
+![Open In Colab
+](https: //colab.research.google.com/assets/colab-badge.svg)]
+(https: //colab.research.google.com/github/niikun/duke_hf/blob/main/notebooks/train.ipynb)
+
+import sys, os, subprocess, textwrap
+
+IN_COLAB = "google.colab" in sys.modules
+if IN_COLAB:
+    # Colab では都度インストール
+    !pip -q install -r https: //raw.githubusercontent.com/niikun/duke_hf/main/requirements-colab.txt
+    # リポジトリをクローン（公開RepoならPAT不要）
+    !git clone -q https: //github.com/niiku/duke_hf.git /content/repo
+    import sys; sys.path.append("/content/repo")
+    os.chdir("/content/repo")
+else:
+    # Codespaces ではローカル相対パスでOK
+    sys.path.append(os.getcwd())
